@@ -1934,14 +1934,72 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
+/* Styling untuk List Pesan */
+.messages-list {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #222;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.messages-list h3 {
+  text-align: center;
+  color: white;
+  margin-bottom: 15px;
+}
+
+#messages-container {
+  list-style: none;
+  padding: 0;
+}
+
 #messages-container li {
-  background: #333; /* Ubah background jadi lebih gelap agar teks putih terlihat */
-  color: white; /* Warna teks putih */
-  padding: 12px;
+  background: #333;
+  color: white;
+  padding: 15px;
   margin-bottom: 10px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#messages-container li strong {
+  font-size: 16px;
+  color: #fff;
+}
+
+#messages-container li span {
+  font-size: 14px;
+  color: #ddd;
+}
+
+#messages-container li p {
+  color: #fff;
+  margin: 5px 0;
+}
+
+/* Responsiveness untuk Tablet dan Mobile */
+@media screen and (max-width: 768px) {
+.messages-list {
+    width: 90%;
+    padding: 15px;
+  }
+  #messages-container li {
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #messages-container li {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
